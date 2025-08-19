@@ -2,7 +2,6 @@ source "https://rubygems.org"
 
 # All your Jekyll things are here
 gem "jekyll"
-# gem "jekyll-theme-chirpy"
 
 # Plugins and tools from the theme
 gem "jekyll-seo-tag"

@@ -2,7 +2,7 @@
 
 # Import the theme
 theme: jekyll-theme-chirpy
-remote_theme: cotes2020/jekyll-theme-chirpy@v5.1.0
+remote_theme: cotes2020/jekyll-theme-chirpy@v6.4.0
 
 # Cometnario de prueba
 
