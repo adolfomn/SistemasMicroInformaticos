@@ -13,4 +13,3 @@ gem "jekyll-redirect-from"
 # Optional gem to fix markdown rendering issues with a specific Ruby version
 gem "webrick", "~> 1.7"
 
-gem 'jekyll-include-cache'
