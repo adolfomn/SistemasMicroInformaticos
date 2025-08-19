@@ -3,6 +3,8 @@
 # Import the theme
 theme: jekyll-theme-chirpy
 
+# Cometnario de prueba
+
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
@@ -156,7 +158,6 @@ paginate: 10
 # The base URL of your site
 baseurl: "/SistemasMicroInformaticos"
 
-# Cometnario de prueba
 
 # ------------ The following options are not recommended to be modified ------------------
 
