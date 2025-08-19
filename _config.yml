@@ -1,7 +1,7 @@
 # The Site Configuration
 
 # Import the theme
-theme: jekyll-theme-chirpy
+# theme: jekyll-theme-chirpy. Cometno esta y dejo la siguiente para que baje el tema auoamticamente de Ruby.
 remote_theme: cotes2020/jekyll-theme-chirpy@v6.4.0
 
 # Cometnario de prueba
