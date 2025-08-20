@@ -1,0 +1,41 @@
+# _config.yml mínimo para Jekyll Chirpy
+
+title: "Sistemas MicroInformáticos"
+description: "Apuntes y materiales de Sistemas MicroInformáticos"
+lang: es
+
+# URL del sitio
+url: https://adolfomn.github.io
+baseurl: /SistemasMicroInformaticos
+
+# Tema
+theme: jekyll-theme-chirpy
+
+# Autor (opcional, aparece en metadatos y sidebar)
+author:
+  name: "Adolfo Martín"
+  url: https://github.com/adolfomn
+
+# Plugins recomendados por Chirpy
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Configuración de paginación (posts en portada)
+paginate: 10
+paginate_path: /page:num/
+
+# Carpeta de posts
+collections:
+  posts:
+    output: true
+
+# Excluir directorios que no quieres que procesen (muy importante lo de backup/)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - backup/    # <- evita que Jekyll lea los _posts de tu carpeta de respaldo
