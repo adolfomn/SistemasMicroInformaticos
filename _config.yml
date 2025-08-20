@@ -19,7 +19,7 @@ timezone: Europe/Madrid
 
 title: Adolfo Martin                         # the main title
 
-tagline: La vida es cambio, cambia!   # it will display as the sub-title
+tagline: La vida es cambio, ¡cambia!   # it will display as the sub-title
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
