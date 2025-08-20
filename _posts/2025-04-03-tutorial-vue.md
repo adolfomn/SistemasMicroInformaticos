@@ -83,7 +83,9 @@ Fíjate en que no necesitamos usar `.value` cuando accedemos a la ref del `messa
 El contenido de los bigotes no se limita a identificadores o rutas: podemos utilizar cualquier expresión válida de JavaScript:
 
 ```html
+{% raw %}
 <h1>{{ message.split('').reverse().join('') }}</h1>
+{% endraw %}
 ```
 
 Ahora, intenta crear algún estado reactivo por ti mismo, y úsalo para renderizar contenido de texto dinámico para el `<h1>` en la plantilla.

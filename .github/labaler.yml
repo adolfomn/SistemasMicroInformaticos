@@ -1,0 +1,33 @@
+# Etiquetas automáticas para PRs en función de los archivos modificados
+
+# Cambios en código fuente
+feature:
+  - 'src/**'
+  - 'lib/**'
+
+# Cambios relacionados con bugs
+bug:
+  - 'fix/**'
+  - 'bugs/**'
+  - '**/*bug*'
+
+# Cambios en documentación
+documentation:
+  - 'docs/**'
+  - '**/*.md'
+
+# Cambios en estilos (CSS/SCSS)
+styles:
+  - 'assets/css/**'
+  - '**/*.scss'
+
+# Cambios en configuración de workflows
+ci:
+  - '.github/workflows/**'
+
+# Cambios en configuración del proyecto
+config:
+  - '*.yml'
+  - '*.yaml'
+  - 'Gemfile'
+  - '_config.yml'
