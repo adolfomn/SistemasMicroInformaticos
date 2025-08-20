@@ -10,9 +10,12 @@ gem "jekyll-archives"
 gem "jekyll-paginate"
 gem "jekyll-redirect-from"
 gem 'jekyll-include-cache'
-gem 'jekyll-paginate'
 
 # Optional gem to fix markdown rendering issues with a specific Ruby version
 gem "webrick", "~> 1.7"
+# gem "jekyll-theme-chirpy", "~> 6.0" -> N es necesario
 
-gem 'jekyll-include-cache'
+# Test / CI
+group :test do
+  gem "html-proofer", "~> 5.0"
+end
