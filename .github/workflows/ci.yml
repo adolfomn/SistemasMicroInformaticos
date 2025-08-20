@@ -1,43 +1,22 @@
-name: CI
+name: CI (Jekyll tests)
 
 on:
   pull_request:
     branches: [ main ]
-    paths-ignore:
-      - ".github/**"
-      - ".vscode/**"
-      - "README.md"
-      - "LICENSE"
-      - "docs/**"
-  push:
-    branches: [ main ]
-    paths-ignore:
-      - ".github/**"
-      - ".vscode/**"
-      - "README.md"
-      - "LICENSE"
-      - "docs/**"
+  workflow_dispatch:
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Ruby
+      - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.3'
           bundler-cache: true
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Build Assets
-        run: npm i && npm run build
-
-      - name: Test Site
+      - name: Run site tests
         run: bash tools/test.sh
