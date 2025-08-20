@@ -3,9 +3,14 @@ source "https://rubygems.org"
 # All your Jekyll things are here
 gem "jekyll"
 
+# Theme
+gem "jekyll-theme-chirpy"
+
+
 # Plugins and tools from the theme
 gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
+gem "jekyll-feed"
 gem "jekyll-archives"
 gem "jekyll-paginate"
 gem "jekyll-redirect-from"
