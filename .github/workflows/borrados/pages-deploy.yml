@@ -1,4 +1,4 @@
-name: 'Automatic build'
+name: Pages
 on:
   push:
     branches:
@@ -8,6 +8,10 @@ on:
       - README.md
       - LICENSE
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+  
 jobs:
   continuous-delivery:
 

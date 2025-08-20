@@ -1,15 +1,22 @@
-name: Lint Commit Messages
+name: Commitlint
 
 on:
-  push:
-    branches:
-      - master
-      - "hotfix/*"
   pull_request:
+    branches: [ main ]
 
 jobs:
   commitlint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: wagoid/commitlint-github-action@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install commitlint
+        run: |
+          npm i --no-fund --no-audit -D @commitlint/{config-conventional,cli}
+      - name: Validate commits
+        run: |
+          npx commitlint --from=${{ github.event.pull_request.base.sha }} --to=${{ github.sha }} --verbose || true

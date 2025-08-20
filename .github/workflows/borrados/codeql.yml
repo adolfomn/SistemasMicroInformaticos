@@ -2,13 +2,10 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ "main" ]
-    paths: [ "_javascript/**/*.js", "_plugins/**/*.rb" ]
+    branches: ["master"]
+    paths: ["_javascript/**/*.js"]
   pull_request:
-    branches: [ "main" ]
-    paths: [ "_javascript/**/*.js", "_plugins/**/*.rb" ]
-  schedule:
-    - cron: '29 1 * * 5'
+    paths: ["_javascript/**/*.js"]
 
 jobs:
   analyze:
@@ -22,8 +19,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'javascript' ]
-      # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+        language: ["javascript"]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
       - name: Checkout repository
@@ -33,10 +30,15 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
-          languages: ${{ matrix.language }}
+          languages: "${{ matrix.language }}"
+          config-file: .github/codeql/codeql-config.yml
 
+      # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).
+      # If this step fails, then you should remove it and run the build manually (see below)
       - name: Autobuild
         uses: github/codeql-action/autobuild@v3
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:${{ matrix.language }}"

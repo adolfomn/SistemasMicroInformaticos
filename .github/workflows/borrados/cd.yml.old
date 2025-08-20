@@ -4,6 +4,8 @@ on:
   push:
     branches: [production]
     tags-ignore: ["**"]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   release:
